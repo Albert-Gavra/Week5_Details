@@ -7,8 +7,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.progtechuc.moviedb.model.Genre;
 import com.progtechuc.moviedb.model.Movies;
 import com.progtechuc.moviedb.model.NowPlaying;
+import com.progtechuc.moviedb.model.UpComing;
 import com.progtechuc.moviedb.repositories.MovieRepository;
 
 public class MovieViewModel extends AndroidViewModel {
@@ -38,6 +40,26 @@ public class MovieViewModel extends AndroidViewModel {
     }
     public LiveData<NowPlaying> getResultNowPlaying(){
         return resultGetNowPlaying;
+    }
+    //== End of viewmodel get now playing
+
+    //== Begin of viewmodel get now playing
+    private MutableLiveData<UpComing> resultGetUpComing = new MutableLiveData<>();
+    public void getUpComing(){
+        resultGetUpComing = repository.getNowUpComingData();
+    }
+    public LiveData<UpComing> getResultUpComing(){
+        return resultGetUpComing;
+    }
+    //== End of viewmodel get now playing
+
+    //== Begin of viewmodel get now playing
+    private MutableLiveData<Genre> resultGetGenre = new MutableLiveData<>();
+    public void getGenre(){
+        resultGetGenre= repository.getGenre();
+    }
+    public LiveData<Genre> getResultGenre(){
+        return resultGetGenre;
     }
     //== End of viewmodel get now playing
 

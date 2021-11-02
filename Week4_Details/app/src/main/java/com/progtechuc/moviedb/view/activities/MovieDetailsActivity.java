@@ -1,4 +1,4 @@
-package com.progtechuc.moviedb.view;
+package com.progtechuc.moviedb.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -55,10 +55,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
     };
 
     public void set_layout(){
-        textView_title_moviedetails = findViewById(R.id.textView_title_moviedetails);
-        textView_description_moviedetails = findViewById(R.id.textView_description_moviedetails);
-        img_poster_moviedetails = findViewById(R.id.img_poster_moviedetails);
-        textView_date_moviedetails = findViewById(R.id.textView_date_moviedetails);
+        textView_title_moviedetails = findViewById(R.id.textView_title_moviedetails_fragment);
+        textView_description_moviedetails = findViewById(R.id.textView_description_moviedetails_fragment);
+        img_poster_moviedetails = findViewById(R.id.img_poster_moviedetails_fragment);
+        textView_date_moviedetails = findViewById(R.id.textView_date_moviedetails_fragment);
     }
 
     public void showData(){

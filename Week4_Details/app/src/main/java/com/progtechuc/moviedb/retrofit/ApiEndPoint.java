@@ -2,6 +2,8 @@ package com.progtechuc.moviedb.retrofit;
 
 import com.progtechuc.moviedb.model.Movies;
 import com.progtechuc.moviedb.model.NowPlaying;
+import com.progtechuc.moviedb.model.UpComing;
+import com.progtechuc.moviedb.model.Genre;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -18,6 +20,16 @@ public interface ApiEndPoint {
 
     @GET("movie/now_playing")
     Call<NowPlaying> getNowPlaying(
+            @Query("api_key") String apiKey
+    );
+
+    @GET("movie/upcoming")
+    Call<UpComing> getUpComing(
+            @Query("api_key") String apiKey
+    );
+
+    @GET("/genre/movie/list")
+    Call<Genre> getGenre(
             @Query("api_key") String apiKey
     );
 
